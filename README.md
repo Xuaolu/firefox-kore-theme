@@ -3,7 +3,7 @@
  Firefox Kore Theme
 </h1>
 
-<p align="center"><strong>A Papirus icon theme for Firefox</strong></p>
+<p align="center"><strong>A simple theme for Firefox with slightly rounded edges, Papirus icons and some tweaks.</strong></p>
 
 ## Light Theme
 ![Light Theme](preview1.png)
@@ -13,11 +13,41 @@
 
 ## Description
 
-This is only icon theme and not contained GTK UI style.
+This is a Firefox theme that combines things I like and have found in other themes I've used.
 
-This theme is supposed to work with current supported Firefox releases:
+## Tweaks
+### Add padding and rounded corners around the browser window.
+```
+uc.tweak.rounded-corners
+```
+### Adds a custom background image to the new tab page.
 
-- Firefox 89
+#### Required setup:
+* In your `chrome/firefox-kore-theme/theme/` folder, add an image with a filename of background-0.(jpg/png).
+* Optionally, add a second image named background-1.(jpg/png) this will be selected when the dark theme is enabled.
+```
+uc.tweak.newtab-background
+```
+
+### Hide the Firefox logo + wordmark when on the new tab page.
+```
+uc.tweak.hide-newtab-logo
+```
+
+### Hide access keys in context menu.
+```
+uc.tweak.context-menu.hide-access-key
+```
+
+### Enable full width tabs.
+```
+uc.tweak.tabwidth
+```
+
+## Recomendation
+I changed the size of the "Flexible Space" to correct the space between the new tab and the corner of the screen or some tool that goes here.
+
+![](flexspace.png)
 
 ## Installation
 
@@ -52,30 +82,12 @@ git clone https://github.com/Xuaolu/firefox-kore-theme.git && cd firefox-kore-th
 1. Go to your profile folder. (Go to `about:support` in Firefox > Application Basics > Profile Directory > Open Directory)
 2. Remove `chrome` folder.
 
-## Development
-
-If you wanna mess around the styles and change something, you might find these
-things useful.
-
-To use the Inspector to debug the UI, open the developer tools (F12) on any
-page, go to options, check both of those:
-
-- Enable browser chrome and add-on debugging toolboxes
-- Enable remote debugging
-
-Now you can close those tools and press Ctrl+Alt+Shift+I to Inspect the browser
-UI.
-
-Also you can inspect any GTK3 application, for example type this into a terminal
-and it will run Epiphany with the GTK Inspector, so you can check the CSS styles
-of its elements too.
-
-```sh
-GTK_DEBUG=interactive firefox
-```
 
 ## Credits
+**[Rafael Mardojai CM](https://github.com/rafaelmardojai/firefox-gnome-theme)** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). 
 
-Used scripts by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/firefox-gnome-theme/graphs/contributors). Based on **[Sai Kurogetsu](https://github.com/kurogetsusai/firefox-gnome-theme)** original work.
+**[Sai Kurogetsu](https://github.com/kurogetsusai/firefox-gnome-theme)**
 
-## Donate
+**[bmFtZQ](https://github.com/bmFtZQ/edge-frfox)**
+
+**[datguypiko](https://github.com/datguypiko/Firefox-Mod-Blur)**
