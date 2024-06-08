@@ -45,6 +45,8 @@ git clone https://github.com/Xuaolu/firefox-kore-theme.git && cd firefox-kore-th
     - Default: All the profiles found in the firefox folder
 
 ## Tweaks
+To enable tweaks, navigate to `about:config` and create a boolean key for each tweak you want to use and set it to `true`.
+To disable a tweak, set the key to `false` or delete it.
 ### Add padding and rounded corners around the browser window.
 ```
 uc.tweak.rounded-corners
