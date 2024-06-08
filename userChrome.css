@@ -115,15 +115,6 @@ border-bottom: none !important;
         0 0.5px 1.5px rgb(0 0 0 / 0.1);
     }
 
-    @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
-        --browser-frame-bgcolor: var(--lwt-accent-color);
-
-        &:-moz-window-inactive {
-            --browser-frame-bgcolor: var(--lwt-accent-color-inactive, var(--lwt-accent-color));
-        }
-    }
-    }
-
     @media (-moz-platform: macos) {
         :root[chromehidden~="toolbar"][chromehidden~="location"][chromehidden~="directories"] {
             border-top: none !important;
