@@ -364,14 +364,8 @@ opacity: 0.5;
   list-style-image: url("icons/quickactions.svg") !important;
 }
 /* User button */
-#fxa-toolbar-menu-button {
+:root[fxastatus="not_configured"] #fxa-avatar-image {
   list-style-image: url("icons/user-available-symbolic.svg") !important;
-}
-:root {
-  --avatar-image-url: url("icons/user-available-symbolic.svg") !important;
-}
-:root[fxastatus="not_configured"] {
-  --avatar-image-url: url("icons/user-available-symbolic.svg") !important;
 }
 /* Home button */
 #home-button {

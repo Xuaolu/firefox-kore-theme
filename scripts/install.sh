@@ -4,7 +4,6 @@ THEMEDIRECTORY=$(cd `dirname $0` && cd .. && pwd)
 FIREFOXFOLDER=~/.mozilla/firefox
 PROFILENAME=""
 
-
 # Get options.
 while getopts 'f:p:g:t:h' flag; do
 	case "${flag}" in
@@ -42,8 +41,17 @@ function saveProfile(){
 		echo >> userChrome.css
 	fi
 
+	if [ -s userContent.css ]; then
+		# Remove older theme imports
+		sed 's/@import "firefox-papirus-icon-theme.*.//g' userContent.css | sed '/^\s*$/d' > userContent.css
+		echo >> userContent.css
+	else
+		echo >> userContent.css
+	fi
+
 	# Import this theme at the beginning of the CSS files.
 	sed -i '1s/^/@import "firefox-papirus-icon-theme\/userChrome.css";\n/' userChrome.css
+	sed -i '1s/^/@import "firefox-papirus-icon-theme\/userContent.css";\n/' userContent.css
 
 	cd ..
 
@@ -62,7 +70,7 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 fi
 echo "Profiles file found"
 
-PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' )) 
+PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | tr -d '\n' | sed -e 's/\s\+/SPACECHARACTER/g' | sed 's/Path=/::/g' ))
 PROFILES_PATHS+=::
 
 PROFILES_ARRAY=()
@@ -78,8 +86,6 @@ else
 	done
 fi
 
-
-
 if [ ${#PROFILES_ARRAY[@]} -eq 0 ]; then
 	echo No Profiles found on $PROFILES_FILE;
 
@@ -91,6 +97,5 @@ else
 			echo Installing Theme on $(sed 's/SPACECHARACTER/ /g' <<< $i) ;
 			saveProfile "$(sed 's/SPACECHARACTER/ /g' <<< $i)"
 		fi;
-	
 	done
 fi
