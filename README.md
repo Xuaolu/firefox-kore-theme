@@ -1,11 +1,12 @@
 <h1 align="center">
 	<img src="logo.png" alt="Firefox Papirus icon theme" width="96" height="96"/><br>
- Firefox Papirus icon theme
+ Firefox Kore Theme
 </h1>
 
 <p align="center"><strong>A Papirus icon theme for Firefox</strong></p>
 
-![Preview of the theme](preview.png)
+![Light Theme](preview1.png)
+![Dark Theme](preview2.png)
 
 ## Description
 
