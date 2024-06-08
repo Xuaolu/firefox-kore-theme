@@ -5,7 +5,10 @@
 
 <p align="center"><strong>A Papirus icon theme for Firefox</strong></p>
 
+## Light Theme
 ![Light Theme](preview1.png)
+
+## Dark Theme with full width tabs
 ![Dark Theme](preview2.png)
 
 ## Description
