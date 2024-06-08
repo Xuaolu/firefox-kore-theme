@@ -13,6 +13,10 @@ toolbarspring {
     min-width: 1px !important;
 }
 
+#alltabs-button {
+display: none !important;
+}
+
 #tabbrowser-tabs {
 border-inline-start: none !important;
 }
