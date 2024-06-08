@@ -9,6 +9,10 @@
     --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color));
 }
 
+toolbarspring {
+    min-width: 1px !important;
+}
+
 #tabbrowser-tabs {
 border-inline-start: none !important;
 }
