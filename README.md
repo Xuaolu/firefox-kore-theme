@@ -22,7 +22,7 @@ This theme is supposed to work with current supported Firefox releases:
 Clone this repo and enter folder and run script:
 
 ```sh
-git clone https://github.com/PapirusDevelopmentTeam/firefox-papirus-icon-theme.git && cd firefox-papirus-icon-theme
+git clone https://github.com/Xuaolu/firefox-kore-theme.git && cd firefox-papirus-icon-theme
 ./scripts/install.sh
 ```
 
