@@ -15,6 +15,35 @@
 
 This is a Firefox theme that combines things I like and have found in other themes I've used.
 
+
+## Installation
+
+### Installation script
+
+Clone this repo and enter folder and run script:
+
+```sh
+git clone https://github.com/Xuaolu/firefox-kore-theme.git && cd firefox-kore-theme
+./scripts/install.sh
+```
+
+#### Install script
+
+```sh
+./scripts/install.sh # Standard
+./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
+```
+
+##### Script options
+
+- `-f <firefox_folder_path>` *optional*
+    - Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
+    - Default: `~/.mozilla/firefox/`
+
+- `-p <profile_name>` *optional*
+    - Set custom profile name, for example `e0j6yb0p.default-nightly`.
+    - Default: All the profiles found in the firefox folder
+
 ## Tweaks
 ### Add padding and rounded corners around the browser window.
 ```
@@ -44,38 +73,12 @@ uc.tweak.context-menu.hide-access-key
 uc.tweak.tabwidth
 ```
 
+
 ## Recomendation
 I changed the size of the "Flexible Space" to correct the space between the new tab and the corner of the screen or some tool that goes here.
 
 ![](flexspace.png)
 
-## Installation
-
-### Installation script
-
-Clone this repo and enter folder and run script:
-
-```sh
-git clone https://github.com/Xuaolu/firefox-kore-theme.git && cd firefox-kore-theme
-./scripts/install.sh
-```
-
-#### Install script
-
-```sh
-./scripts/install.sh # Standard
-./scripts/install.sh -f ~/.var/app/org.mozilla.firefox/.mozilla/firefox # Flatpak
-```
-
-##### Script options
-
-- `-f <firefox_folder_path>` *optional*
-    - Set custom Firefox folder path, for example `~/.mozilla/icecat/`.
-    - Default: `~/.mozilla/firefox/`
-
-- `-p <profile_name>` *optional*
-    - Set custom profile name, for example `e0j6yb0p.default-nightly`.
-    - Default: All the profiles found in the firefox folder
 
 ## Uninstalling
 
