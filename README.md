@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="logo.png" alt="Firefox Papirus icon theme" width="96" height="96"/><br>
+	
  Firefox Kore Theme
 </h1>
 
