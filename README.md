@@ -44,6 +44,10 @@ git clone https://github.com/Xuaolu/firefox-kore-theme.git && cd firefox-kore-th
     - Set custom profile name, for example `e0j6yb0p.default-nightly`.
     - Default: All the profiles found in the firefox folder
 
+
+#### Manual Installation
+Create a chrome folder in your Firefox profile directory, place the `theme` folder, `userChrome.css` and `userContent.css` inside this folder. Place `user.js` inside your Firefox profile directory.
+
 ## Tweaks
 To enable tweaks, navigate to `about:config` and create a boolean key for each tweak you want to use and set it to `true`.
 To disable a tweak, set the key to `false` or delete it.
