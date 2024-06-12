@@ -30,10 +30,6 @@ border-radius: 6px !important;
 --tab-border-radius: 6px !important;
 }
 
-/*#navigator-toolbox {
-border-bottom: none !important;
-}*/
-
 #widget-overflow-list > #fxa-toolbar-menu-button #fxa-avatar-image,
 .customization-target > #fxa-toolbar-menu-button #fxa-avatar-image {
     scale: 1.25 !important;
@@ -103,16 +99,20 @@ border-bottom: none !important;
     #main-window:not([chromehidden~="toolbar"]) {
     --uc-tweak-rounded-corners-padding: 4px;
     --uc-tweak-rounded-corners-radius: 6px;
-    --uc-tweak-rounded-corners-shadow:
-    0 -.8px 0 0 rgb(0 0 0 / 0.02),
-    0 0.5px 1px 1px rgb(0 0 0 / 0.06),
-    0 1px 1px rgb(0 0 0 / 0.1);
+    --uc-tweak-rounded-corners-shadow: 0 -.8px 0 0 rgb(0 0 0 / 0.02), 0 0.5px 1px 1px rgb(0 0 0 / 0.06), 0 1px 1px rgb(0 0 0 / 0.1);
     --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color));
 
     @media (resolution > 1.8dppx) {
-        --uc-tweak-rounded-corners-shadow:
-        0 0 0.5px 0.5px rgb(0 0 0 / 0.06),
-        0 0.5px 1.5px rgb(0 0 0 / 0.1);
+        --uc-tweak-rounded-corners-shadow: 0 0 0.5px 0.5px rgb(0 0 0 / 0.06), 0 0.5px 1.5px rgb(0 0 0 / 0.1);
+    }
+
+    @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+        --browser-frame-bgcolor: var(--lwt-accent-color);
+
+        &:-moz-window-inactive {
+            --browser-frame-bgcolor: var(--lwt-accent-color-inactive, var(--lwt-accent-color));
+        }
+    }
     }
 
     @media (-moz-platform: macos) {
@@ -145,9 +145,7 @@ border-bottom: none !important;
         position: absolute;
         inset: 0;
         border-radius: inherit;
-        box-shadow:
-        var(--uc-tweak-rounded-corners-shadow, 0 0 transparent),
-        0 0 0 16px var(--browser-frame-bgcolor) !important;
+        box-shadow: var(--uc-tweak-rounded-corners-shadow, 0 0 transparent), 0 0 0 16px var(--browser-frame-bgcolor) !important;
         clip-path: inset(0);
         pointer-events: none;
     }
